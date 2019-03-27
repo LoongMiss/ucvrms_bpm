@@ -1,0 +1,8 @@
+camunda.bpm:
+  admin-user:
+    id: yulong
+    password: 123456
+    firstName: Yang
+    email: yulong.yang@ucarinc.com
+  filter:
+    create: All tasks
