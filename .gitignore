@@ -1,0 +1,20 @@
+#
+# IDE
+#
+.classpath
+.project
+.settings
+.springBeans
+.factorypath
+.idea/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+#
+# MAVEN
+#
+target/
+pom.xml.versionsBackup
+github-pages/
+/.gradle/
