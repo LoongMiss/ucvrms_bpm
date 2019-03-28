@@ -6,3 +6,6 @@ camunda.bpm:
     email: yulong.yang@ucarinc.com
   filter:
     create: All tasks
+  database:
+    type: mysql
+    schema-name:
