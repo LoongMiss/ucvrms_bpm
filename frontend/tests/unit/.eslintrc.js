@@ -1,5 +1,8 @@
 module.exports = {
   env: {
-    mocha: true
+    jest: true
+  },
+  rules: {
+    'import/no-extraneous-dependencies': 'off'
   }
-};
+}

@@ -8,6 +8,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * <p>测试
@@ -25,5 +29,13 @@ public class MyController {
   public ResponseEntity getTest() {
     log.info("test");
     return new ResponseEntity(HttpStatus.OK);
+  }
+
+  @RequestMapping(value = "/getMap", method = RequestMethod.GET)
+  @ResponseBody
+  public Map getMap(){
+    Map<String, String> result = new HashMap<String, String>(4);
+    result.put("1111","1111");
+    return result;
   }
 }
