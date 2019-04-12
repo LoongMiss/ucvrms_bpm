@@ -39,7 +39,7 @@ public class ExampleProcessEngineConfiguration {
     DruidDataSource dataSource = new DruidDataSource();
     dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
     dataSource.setUrl("jdbc:mysql://localhost:3306/camunda?autoReconnect=true&serverTimezone=UTC&characterEncoding=utf-8");
-    dataSource.setUsername("camunda");
+    dataSource.setUsername("root");
     dataSource.setPassword("123456");
     return dataSource;
   }
