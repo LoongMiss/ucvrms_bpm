@@ -11,23 +11,21 @@ import util from './libs/util.ice'; // 菜单配置
 
 const asideMenuConfig = [
   {
-    name: '演示页面',
+    name: '引擎',
     icon: 'folder-o',
     children: [
       {
-        name: '演示 1',
+        name: 'BPMN',
         path: '/demo1/',
       },
       {
-        name: '演示 2',
+        name: 'DMN',
         path: '/demo2/',
       },
+      {
+        name: '',
+      }
     ],
-  },
-  {
-    name: '流程数',
-    path: '/countprocess',
-    icon: 'home',
   },
 ]; // 顶栏菜单配置
 // ice 不会修改 headerMenuConfig

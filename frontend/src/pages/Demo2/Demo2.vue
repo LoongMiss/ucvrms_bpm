@@ -9,10 +9,6 @@
       <el-button type="warning">警告</el-button>
       <el-button type="danger">危险</el-button>
     </el-row>
-    <route-info/>
-    <template slot="footer">
-      <footer-link/>
-    </template>
   </d2-container>
 </template>
 

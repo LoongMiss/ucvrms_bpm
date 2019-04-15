@@ -5,9 +5,8 @@ import util from '@/libs/util.ice'; // 页面和布局
 import Index from './pages/Index';
 import Login from './pages/Login';
 import Error404 from './pages/Error404';
-import Demo1 from './pages/Demo1';
+import Demo1 from './pages/Bpmn';
 import Demo2 from './pages/Demo2';
-import CountProcess from './pages/count_process';
 import HeaderAside from './layouts/HeaderAside'; // 变量名 routerConfig 为 iceworks 检测关键字
 // ice 会自动在这个变量下添加路由数据
 // 请不要修改名称
@@ -73,10 +72,15 @@ const routerConfig = [
     component: Demo2,
   },
   {
-    path: '/countprocess',
+    path: '/definition/add',
+    name: 'addDefinition',
     layout: HeaderAside,
-    component: CountProcess,
-  },
+    component: import('./pages/Definition'),
+    meta: {
+      requiresAuth: true,
+      title: '新增流程图',
+    },
+  }
 ]; // 不参与菜单显示的
 // ice 不会处理这部分
 // 但是这部分路由也会被注册

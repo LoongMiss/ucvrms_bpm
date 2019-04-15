@@ -5,10 +5,40 @@ const resolve = dir => require('path').join(__dirname, dir)
 let baseUrl = '/'
 
 module.exports = {
-  baseUrl: baseUrl, // 根据你的实际情况更改这里
+  publicPath: baseUrl, // 根据你的实际情况更改这里
   lintOnSave: true,
   devServer: {
-    publicPath: baseUrl // 和 baseUrl 保持一致
+    port: 8080, // 端口号
+    host: 'localhost',
+    https: false, // https:{type:Boolean}
+    open: true, // 配置自动启动浏览器
+    // proxy: 'http://localhost:4000' // 配置跨域处理,只有一个代理
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8081', // 需要请求的地址
+        changeOrigin: true // 是否跨域
+        /* pathRewrite: {
+            '^/sell': '/'  // 替换target中的请求地址，也就是说，在请求的时候，url用'/proxy'代替'http://ip.taobao.com'
+        } */
+      },
+
+      '/app': {
+        target: 'http://localhost:8081', // 需要请求的地址
+        changeOrigin: true // 是否跨域
+        /* pathRewrite: {
+            '^/sell': '/'  // 替换target中的请求地址，也就是说，在请求的时候，url用'/proxy'代替'http://ip.taobao.com'
+        } */
+      },
+
+      '/rest': {
+        target: 'http://localhost:8081', // 需要请求的地址
+        changeOrigin: true // 是否跨域
+        /* pathRewrite: {
+            '^/sell': '/'  // 替换target中的请求地址，也就是说，在请求的时候，url用'/proxy'代替'http://ip.taobao.com'
+        } */
+      }
+
+    } // 配置多个代理
   },
   // 默认设置: https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-service/lib/config/base.js
   chainWebpack: config => {

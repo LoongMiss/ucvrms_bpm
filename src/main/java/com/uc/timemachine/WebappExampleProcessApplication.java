@@ -1,4 +1,4 @@
-package com.camunda.bpm.getstarted.ucvrms;
+package com.uc.timemachine;
 
 import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.spring.boot.starter.annotation.EnableProcessApplication;
@@ -30,6 +30,6 @@ public class WebappExampleProcessApplication {
   @EventListener
   private void processPostDeploy(PostDeployEvent event) {
 
-    runtimeService.startProcessInstanceByKey("loanApproval");
+    //runtimeService.startProcessInstanceByKey("loanApproval");
   }
 }

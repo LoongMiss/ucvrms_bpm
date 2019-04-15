@@ -1,4 +1,4 @@
-package com.camunda.bpm.getstarted.ucvrms;
+package com.uc.timemachine.base;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

@@ -1,19 +1,13 @@
-package com.camunda.bpm.getstarted.ucvrms;
+package com.uc.timemachine.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.camunda.bpm.engine.spring.ProcessEngineFactoryBean;
 import org.camunda.bpm.engine.spring.SpringProcessEngineConfiguration;
 import org.camunda.bpm.engine.spring.SpringProcessEngineServicesConfiguration;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.jdbc.datasource.SimpleDriverDataSource;
 import org.springframework.transaction.PlatformTransactionManager;
 
 import javax.sql.DataSource;
@@ -39,7 +33,7 @@ public class ExampleProcessEngineConfiguration {
     DruidDataSource dataSource = new DruidDataSource();
     dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
     dataSource.setUrl("jdbc:mysql://localhost:3306/camunda?autoReconnect=true&serverTimezone=UTC&characterEncoding=utf-8");
-    dataSource.setUsername("root");
+    dataSource.setUsername("camunda");
     dataSource.setPassword("123456");
     return dataSource;
   }
